@@ -1,0 +1,135 @@
+// Typography of project pages
+
+@mixin typeface-title ($size, $device: desktop){
+  font-family: 'Artifakt Element', sans-serif;
+
+  //H1
+  @if $size == h1 and $device == desktop{
+    font-size: 100px;
+    line-height: 100%;
+  }@else if $size == h1 and $device == mobile{
+    font-size: 56px;
+    line-height: 120%;
+  }
+
+    //H2
+    @if $size == h2 and $device == desktop{
+      font-size: 50px;
+      line-height: 100%;
+    }@else if $size == h2 and $device == mobile{
+      font-size: 25px;
+      line-height: 120%;
+    }
+
+      //HT
+      @if $size == ht and $device == desktop{
+        font-size: 50px;
+        line-height: 100%;
+      }@else if $size == ht and $device == mobile{
+        font-size: 55px;
+        line-height: 120%;
+      }
+
+    //H3
+    @if $size == h3 and $device == desktop{
+      font-size: 30px;
+      line-height: 110%;
+    }@else if $size == h3 and $device == mobile{
+      font-size: 20px;
+      line-height: 100%;
+    }
+}
+
+@mixin typeface-paragraph ($size, $device: desktop){
+  font-family: 'Artifakt Element', sans-serif;
+
+  //P1
+  @if $size == p1 and $device == desktop{
+    font-size: 42px;
+    line-height: 150%;
+    width: 100%;
+  }@else if $size == p1 and $device == mobile{
+    font-size: 22px;
+    line-height: 100%;
+  }
+
+  //P2
+   @if $size == p2 and $device == desktop{
+    font-size: 30px;
+    line-height: 150%;
+  }@else if $size == p2 and $device == mobile{
+    font-size: 20px;
+    line-height: 100%;
+  }
+
+  //P3
+    @if $size == p3 and $device == desktop{ 
+      font-size: 20px;
+      line-height: 150%;
+      }@else if $size == p3 and $device == mobile{
+      font-size: 20px;
+      line-height: 100%;
+    }
+
+    //P4
+    @if $size == p4 and $device == desktop{ 
+      font-size: 20px;
+      line-height: 150%;
+      width: 100%;
+      }@else if $size == p4 and $device == mobile{
+      font-size: 20px;
+      line-height: 100%;
+    }
+}
+
+h1{
+  color: black;
+  @include typeface-title(h1, desktop);
+
+}
+
+h2{
+  color: black;
+  @include typeface-title(h2, desktop);
+}
+
+.ht{
+  color: black;
+  @include typeface-title(ht, desktop);
+}
+
+h3{
+  color:black;
+  @include typeface-title(h3, desktop);
+}
+
+
+p{
+  color: black;
+  @include typeface-paragraph(p1,desktop);
+}
+
+.p2{
+  color: black;
+  @include typeface-paragraph(p2,desktop);
+}
+
+.p3{
+  color: black;
+  @include typeface-paragraph(p3,desktop);
+}
+
+.p4{
+  color: black;
+  font-weight: 800;
+  @include typeface-paragraph(p4,desktop);
+}
+
+a{
+  text-decoration:none;
+  color:black;
+  &:hover{
+    transition:.5s ease;
+    color:black;
+  }
+}

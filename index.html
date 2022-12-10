@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style/style.css" />
+    <title>IMC</title>
+    <script src="./js/imc.js"></script>
+  </head>
+  <body>
+    <header class="container">
+      <div class="flex-item-1">
+        <h1>IMC</h1>
+        <p>índice de massa corporal</p>
+        <p>
+          O IMC e tem o objetivo de definir qual é o peso ideal para cada
+          indivíduo. O método é reconhecido pela Organização Mundial da Saúde
+          (OMS).
+        </p>
+
+        <a href="#imc"> <button class="calcular">Calcular IMC</button></a>
+
+        <button class="detalhe">Mais Detalhe</button>
+      </div>
+
+      <div>
+        <img src="./svg/imc.svg" />
+      </div>
+    </header>
+
+    <section class="container flex-column">
+      <div>
+        <h2>Qual a importância de calcular o índice?</h2>
+        <p class="p2">
+          O IMC é um grande aliado da saúde, já que pode alertar sobre o risco
+          de doenças associadas à obesidade. Ao descobrir qual o seu peso ideal
+          e, se for o caso, o quanto você está acima ou abaixo dele, é possível
+          tomar medidas para cuidar da saúde e tentar evitar complicações.
+        </p>
+
+        <p class="p2">
+          Dentre as condições mais associadas ao sobrepeso e à obesidade estão
+          colesterol elevado, diabetes, infarto e hipertensão. Existem, no
+          entanto, muitas outras doenças relacionadas.
+        </p>
+
+        <p class="p2">
+          Em casos de baixo peso, o IMC pode alertar para o risco de
+          desnutrição, que muitas vezes causa problemas de imunidade, propensão
+          a infecções e piora na cicatrização de feridas, dentre outros
+          problemas.
+        </p>
+      </div>
+    </section>
+
+    <section class="container">
+      <div class="flex-item-1">
+        <img src="./svg/peso.svg" />
+      </div>
+
+      <div class="flex-item-2">
+        <h2>Como calcular o IMC</h2>
+        <p class="p2">
+          O cálculo do IMC é feito usando a seguinte fórmula matemática: Peso ÷
+          (altura x altura).
+        </p>
+
+        <h3>1º Passo:</h3>
+        <p class="p2">
+          Calcular a altura ao quadrado, multiplicando o valor da altura por ele
+          mesmo.
+        </p>
+
+        <p class="p2">
+          <strong>Altura<sup>2</sup> = Altura x Altura</strong>
+        </p>
+        <p class="p2">
+          <strong>Exemplo: </strong> 1,60m x 1,60m = 2,56m<sup>2</sup>
+        </p>
+
+        <h3>2º Passo:</h3>
+        <p class="p2">
+          Dividir seu peso em kg pelo valor obtido de altura <sup>2</sup>
+        </p>
+        <p class="p2"><strong>Peso / Altura = IMC</strong></p>
+        <p class="p2">
+          <strong>Exemplo: </strong> 60kg/2,56m<sup>2</sup> = 23,44 (peso
+          normal)
+        </p>
+      </div>
+    </section>
+
+    <section class="container flex-column">
+      <div>
+        <h2>Tabela de classificação</h2>
+        <p class="p2">
+          A tabela de classificação tem a função de mostrar o diagnóstico
+          nutricional.
+        </p>
+
+        <p class="p2">
+          Pessoas com menos de 20 anos de idade precisam consultar um médico
+          para fazer o controle do peso ideal.
+        </p>
+      </div>
+
+      <div>
+        <table class="table">
+          <tr class="cabecalho">
+            <th>IMC</th>
+            <th>CLASSIFICAÇÃO</th>
+            <th>OBESIDADE (GRAU)</th>
+          </tr>
+
+          <tr class="magra">
+            <td>MENOR QUE 18,5</td>
+            <td>MAGREZA</td>
+            <td>0</td>
+          </tr>
+
+          <tr class="normal">
+            <td>ENTRE 18,5 E 24,9</td>
+            <td>NORMAL</td>
+            <td>0</td>
+          </tr>
+
+          <tr class="sobrepeso">
+            <td>ENTRE 25,0 E 29,9</td>
+            <td>SOBREPESO</td>
+            <td>I</td>
+          </tr>
+
+          <tr class="obesidade">
+            <td>ENTRE 30,0 E 39,9</td>
+            <td>OBESIDADE</td>
+            <td>II</td>
+          </tr>
+
+          <tr class="grave">
+            <td>MAIOR QUE 40,0</td>
+            <td>OBESIDADE GRAVE</td>
+            <td>III</td>
+          </tr>
+        </table>
+      </div>
+    </section>
+
+    <section class="container">
+      <section class="flex-item-4">
+        <div class="button">
+          <h2 id="imc">Calcular IMC</h2>
+          <p class="p2">Insira seu peso e sua altura nos campos abaixo.</p>
+        </div>
+
+        <div class="flex-column button">
+          <p class="p2">Altura</p>
+          <input type="text" id="altura" placeholder="Metros" />
+
+          <p class="p2">Peso</p>
+          <input type="text" id="peso" placeholder="ex:69.23" />
+        </div>
+        <div class="flex-column button">
+          <button class="calcular" onclick="calcular()">Calcular</button>
+          <button class="limpar" onclick="limpar()">Limpar</button>
+        </div>
+      </section>
+      <!-- <section class="flex-item-1">
+        <h2>Seu Imc é:</h2>
+        <span id="resultado"></span>
+        <h3>MAGREZA</h3>
+        <p class="p2">
+          Procure um médico. Algumas pessoas têm um baixo peso por
+          características do seu organismo e tudo bem. Outras podem estar
+          enfrentando problemas, como a desnutrição. É preciso saber qual é o
+          caso.
+        </p>
+
+        <h3>NORMAL</h3>
+
+        <p class="p2">
+          Que bom que você está com o peso normal! E o melhor jeito de continuar assim é mantendo um estilo de vida ativo e uma alimentação equilibrada.
+        </p>
+
+        <h3>SOBREPESO</h3>
+        <p class="p2">
+          Ele é, na verdade, uma pré-obesidade e muitas pessoas nessa faixa já apresentam doenças associadas, como diabetes e hipertensão. Importante rever hábitos e buscar ajuda antes de, por uma série de fatores, entrar na faixa da obesidade pra valer.
+        </p>
+
+        <h3>OBESIDADE</h3>
+        <p class="p2">
+          Mesmo que seus exames aparentem estar normais, é hora de se cuidar, iniciando mudanças no estilo de vida com o acompanhamento próximo de profissionais de saúde. 
+        </p>
+
+        <h3>OBESIDADE GRAVE</h3>
+        <p class="p2">
+          Aqui o sinal é vermelho, com forte probabilidade de já existirem doenças muito graves associadas. O tratamento deve ser ainda mais urgente. 
+        </p>
+      </section>  -->
+    </section>
+  </body>
+</html>

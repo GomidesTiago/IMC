@@ -1,0 +1,14 @@
+*, *::after,*::before{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@import "./partials/typography";
+@import "./partials/button";
+@import "./partials/layout";
+@import "./partials/spacing";
+
+html{
+  scroll-behavior: smooth;
+}
